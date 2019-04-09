@@ -23,11 +23,11 @@ end
 import VPNManager
 
 //Create your VPN Manager variable
-let vpn = VPNManager()
+let vpn = VPNManager.shared
 vpn.delegate = self 
 
 //Create your VPN Account and configurations
-let vpnAccount = VPNAccount(id: "UNIQUE ID", type: VPNType.IKEv2, title: "TITLE SEEN IN SETTINGS", server: "IP HERE", account: "bd2147240ab2471d", groupName: "Group Name Of Your VPN", remoteId: "Remote IP Address(Same most of the time)", alwaysOn: true)
+let vpnAccount = VPNAccount(id: "UNIQUE ID", type: VPNProtocolType.IKEv2, title: "TITLE SEEN IN SETTINGS", server: "IP HERE", account: "bd2147240ab2471d", groupName: "Group Name Of Your VPN", remoteId: "Remote IP Address(Same most of the time)", alwaysOn: true)
 
 //Set your account password and secret
 vpnAccount.passwordRef = "YourVPNPassword".data(using: .utf8)
